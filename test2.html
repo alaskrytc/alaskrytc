@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحتي الشخصية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #27ae60;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #ddd;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .tab:hover {
+            background: #27ae60;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            max-width: 800px;
+        }
+        .active {
+            display: block;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #27ae60;
+        }
+        @media (max-width: 768px) {
+            .tab {
+                flex: 1; /* ملء الصف في الشاشات الصغيرة */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اسمك هنا</h1>
+        <p>موقعك الإلكتروني: www.example.com</p>
+    </header>
+    <div class="tabs">
+        <div class="tab" onclick="openTab(event, 'blog')">المدونة</div>
+        <div class="tab" onclick="openTab(event, 'centrals')">السنترالات</div>
+        <div class="tab" onclick="openTab(event, 'cameras')">كاميرات المراقبة</div>
+        <div class="tab" onclick="openTab(event, 'attendance')">بصمة حضور وانصراف</div>
+    </div>
+    <div id="blog" class="tab-content active">
+        <h2>المدونة</h2>
+        <p>هنا يمكنك كتابة مقالاتك وآرائك حول مواضيع مختلفة.</p>
+    </div>
+    <div id="centrals" class="tab-content">
+        <h2>السنترالات</h2>
+        <p>تفاصيل حول مختلف السنترالات المتاحة، ميزاتها، وكيفية استخدامها.</p>
+    </div>
+    <div id="cameras" class="tab-content">
+        <h2>كاميرات المراقبة</h2>
+        <p>معلومات عن كاميرات المراقبة، أنواعها، وكيفية تركيبها.</p>
+    </div>
+    <div id="attendance" class="tab-content">
+        <h2>بصمة حضور وانصراف</h2>
+        <p>شرح حول أنظمة بصمة الحضور والانصراف وكيفية استخدامها في المؤسسات.</p>
+    </div>
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script>
+        function openTab(event, tabName) {
+            // إخفاء جميع محتويات التبويبات
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // إزالة التحديد من جميع التبويبات
+            const tabLinks = document.querySelectorAll('.tab');
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // عرض التبويب المحدد
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

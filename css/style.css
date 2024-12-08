@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Myfont";
+  src: url("../fonts/Droid.Arabic.Kufi.ttf");
+}
+body {
+  font-family: "Myfont";
+  direction: rtl;
+  background-color: #1CD939;
+}
+
+.contener {
+  background-color: #ccc;
+}
+.contener .sliders {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  position: relative;
+}
+.contener .sliders .personal-details {
+  flex: 1;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.contener .sliders .personal-details .user-card {
+  width: 100%;
+  height: 100vh;
+  box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s ease-in;
+}
+.contener .sliders .personal-details .user-card:hover {
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+.contener .sliders .personal-details .user-card .user-cover {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  background-image: url(https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+  background-position: center;
+  background-size: cover;
+}
+.contener .sliders .personal-details .user-card .user-cover .user-avatar {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -35px;
+  border: 2px solid #fff;
+}
+.contener .sliders .personal-details .user-card .user-details {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  width: 80%;
+}
+.contener .sliders .personal-details .user-card .user-details .user-name {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.contener .sliders .personal-details .user-card .user-details .user-email {
+  font-size: 14px;
+  color: #0f5fc0;
+  font-weight: 500;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #666;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text ul {
+  list-style-type: none;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text a {
+  color: #b63b4d;
+  text-decoration: none;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #FFF;
+  border-radius: 4px;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 10px 10px 10px 20px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .link i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  color: #005559;
+  transition: all 0.4s ease;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .link .fa-chevron-down {
+  left: 90%;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .submenu {
+  display: none;
+  background: #444359;
+  font-size: 14px;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .submenu li {
+  border-bottom: 1px solid #4b4a5e;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+  transition: all 0.25s ease;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .submenu a:hover {
+  background: #b63b4d;
+  color: #FFF;
+}
+.contener .sliders .personal-details .user-card .user-details .user-text .accordion .submenu .default {
+  display: block;
+}
+.contener .sliders .personal-details .user-card .contact-user {
+  margin-bottom: 15px;
+  text-align: center;
+  height: 35px;
+  width: 80%;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  background: #005559;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+}
+.contener .sliders .serveses {
+  text-align: center;
+  flex: 3;
+}
+.contener .sliders .serveses .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.contener .sliders .serveses .container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contener .sliders .serveses .container .tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.contener .sliders .serveses .container .tabs .tab {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #005559;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.contener .sliders .serveses .container .tabs .tab:hover {
+  background: #47FF63;
+}
+.contener .sliders .serveses .container .tabs .tab a {
+  color: #fff;
+  text-decoration: none;
+}
+.contener .sliders .serveses .container .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.contener .sliders .serveses .container .product-grid .product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  padding: 15px;
+}
+.contener .sliders .serveses .container .product-grid .product-card:hover {
+  transform: scale(1.06);
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info {
+  padding: 15px;
+  text-align: right;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info p {
+  color: #666;
+  text-align: right;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .price {
+  font-weight: bold;
+  color: #27ae60;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .product-description {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .product-description p {
+  text-align: justify;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .rating {
+  margin: 10px 0;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .social-share {
+  margin-top: 10px;
+  text-align: center;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .social-share a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .social-share i {
+  font-size: 1.5em;
+  color: #333;
+  transition: color 0.3s;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .social-share i:hover {
+  color: #47FF63;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .btn {
+  background-color: #005559;
+  font-family: "Myfont";
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contener .sliders .serveses .container .product-grid .product-card .product-info .btn:hover {
+  background-color: #219653;
+}
+.contener .sliders .serveses .container .product-grid .btn {
+  background-color: #005559;
+  font-family: "Myfont";
+  width: 100%;
+  height: 50px;
+  text-decoration: none;
+  margin-top: 10px;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contener .sliders .serveses .container .product-grid .btn:hover {
+  background-color: #219653;
+}
+
+@media (max-width: 768px) {
+  .sliders {
+    flex-direction: column;
+  }
+  .sliders .personal-details {
+    width: 100%;
+    margin: auto;
+    position: static !important;
+  }
+  .sliders .serveses {
+    flex-direction: column;
+    width: 100%;
+  }
+  .sliders .serveses .contener .tab {
+    flex-direction: column;
+    background-color: #b63b4d;
+  }
+  .sliders .serveses .contener .tab .tab {
+    margin: 5px 0;
+    padding: 5px 10px;
+  }
+  .sliders .serveses .product-grid {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

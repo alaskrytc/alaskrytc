@@ -1,0 +1,351 @@
+
+$primary:#005559;
+$secondry:#47FF63;
+$hover:#1CD939;
+$white:#fff;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Myfont";
+    src: url('../fonts/Droid.Arabic.Kufi.ttf');
+}
+
+
+body{
+    font-family: 'Myfont';
+    direction: rtl;
+    background-color: #1CD939;
+
+}
+.contener{
+    background-color: #ccc;
+
+    .sliders{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        position: relative;
+
+        .personal-details{
+            flex: 1;
+            height: 100vh;
+            position: sticky; 
+            top: 0;
+
+
+            .user-card {
+                width: 100%;
+                height: 100vh;
+                box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.3);;
+                overflow: hidden;
+                background: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                transition: box-shadow 0.2s ease-in;
+                &:hover {
+                    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.4);
+                }
+                .user-cover {
+                    height: 150px;
+                    width: 100%;
+                    position: relative;
+                    background-image: url(https://images.pexels.com/photos/5969/wood-nature-forest-bridge.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+                    background-position: center;
+                    background-size: cover;
+
+                    .user-avatar {
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        bottom: -35px;
+                        border: 2px solid #fff;
+                    }                      
+                }
+                .user-details {
+                    text-align: center;
+                    margin-top: 35px;
+                    margin-bottom: 25px;
+                    width: 80%;
+
+                    .user-name {
+                        margin-bottom: 10px;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                    .user-email {
+                        font-size: 14px;
+                        color: #0f5fc0;
+                        font-weight: 500;
+                    }
+                    .user-text{
+                        margin-top: 5px;
+                        font-size: 15px;
+                        color: #666;
+                        ul {
+                            list-style-type: none;
+                        }
+                            
+                            a {
+                            color: #b63b4d;
+                            text-decoration: none;
+                        }
+                        .accordion {
+                            width: 100%;
+                            max-width: 360px;
+                            margin: 30px auto 20px;
+                            background: #FFF;
+                            border-radius: 4px;
+                            .link {
+                                cursor: pointer;
+                                display: block;
+                                padding: 10px 10px 10px 20px;
+                                color: #4D4D4D;
+                                font-size: 14px;
+                                font-weight: 700;
+                                border-bottom: 1px solid #CCC;
+                                position: relative;
+                                transition: all 0.4s ease;
+
+                                i {
+                                    position: absolute;
+                                    top: 16px;
+                                    left: 12px;
+                                    font-size: 18px;
+                                    color: $primary;
+                                    transition: all 0.4s ease;
+
+                                }
+                                .fa-chevron-down {
+                                    // transform: rotate(180deg);
+                                    left: 90%;
+                                    
+                                }
+                            }
+                            .submenu {
+                                display: none;
+                                background: #444359;
+                                font-size: 14px;
+
+                                li {
+                                    border-bottom: 1px solid #4b4a5e;
+                                }
+                                a {
+                                    display: block;
+                                    text-decoration: none;
+                                    color: #d9d9d9;
+                                    padding: 12px;
+                                    padding-left: 42px;
+                                    transition: all 0.25s ease;
+
+                                    &:hover{
+                                        background: #b63b4d;
+                                        color: #FFF;
+                                    }
+                                }
+                                .default{
+                                    display: block;
+                                }
+                            }
+                            // li.default .submenu {display: block;}
+                        }
+                    }
+                }
+                .contact-user {
+                    margin-bottom: 15px;
+                    text-align: center;
+                    height: 35px;
+                    width: 80%;
+                    border: none;
+                    color: $white;
+                    font-weight: bold;
+                    background: $primary;
+                    letter-spacing: 0.5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .serveses{
+            text-align: center;
+            flex: 3;
+            .container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+                h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .tabs {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    .tab {
+                        margin: 0 10px;
+                        cursor: pointer;
+                        padding: 5px 10px;
+                        background: $primary;
+                        color: $white;
+                        border-radius: 5px;
+                        transition: background 0.3s;
+                        &:hover {
+                            background: $secondry;
+                        }
+                        a{
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .product-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    gap: 20px;
+                    .product-card {
+                        background: white;
+                        border-radius: 12px;
+                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                        text-align: center;
+                        transition: transform 0.3s;
+                        padding: 15px;
+                        &:hover {
+                            transform: scale(1.06);
+                        }
+                        .product-image{
+                            img {
+                                width: 100%;
+                                height: auto;
+                                border-radius: 50px;
+                            }
+                        } 
+                        .product-info {
+                            padding: 15px;
+                            text-align: right;
+                            h2 {
+                                font-size: 1.2em;
+                                margin: 10px 0;
+                            }
+                            p {
+                                color: #666;
+                                text-align: right;
+                            }
+                            .price {
+                                font-weight: bold;
+                                color: #27ae60;
+                            }
+                            .product-description {
+                                margin: 10px 0;
+                                font-size: 0.9em;
+                                p{
+                                    text-align: justify;
+                                }
+                            }
+                            .rating {
+                                margin: 10px 0;
+                            }
+                            .social-share {
+                                margin-top: 10px;
+                                text-align: center;
+                                a {
+                                    margin: 0 5px;
+                                    text-decoration: none;
+                                    color: #333;
+                                }
+                                i {
+                                    font-size: 1.5em;
+                                    color: #333;
+                                    transition: color 0.3s;
+                                    &:hover {
+                                        color: $secondry;
+                                    }
+                                }
+                            }
+                            .btn {
+                                background-color: $primary;
+                                font-family: 'Myfont';
+                                width: 100%;
+                                margin-top: 10px;
+                                color: white;
+                                padding: 10px 15px;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s;
+                                &:hover {
+                                    background-color: #219653;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .btn{
+                        background-color: $primary;
+                        font-family: 'Myfont';
+                        width: 100%;
+                        height: 50px;
+                        text-decoration: none;
+                        margin-top: 10px;
+                        color: white;
+                        padding: 10px 15px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                        &:hover {
+                            background-color: #219653;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    .sliders{
+        flex-direction: column;
+        .personal-details {
+            width: 100%;
+            margin: auto;
+            position: static !important;
+            // top: auto;
+            
+        }
+        .serveses{
+            flex-direction: column;
+            width: 100%;
+            .contener{
+                .tab{
+                    flex-direction: column;
+                    background-color: #b63b4d;
+                    .tab{
+                        margin: 5px 0;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+            .product-grid{
+                width: 100%;
+
+            }
+
+
+        }
+
+    }
+
+  }
