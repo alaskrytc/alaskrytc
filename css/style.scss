@@ -1,6 +1,6 @@
 
 $primary:#005559;
-$secondry:#47FF63;
+$secondry:#00a0a0;
 $hover:#1CD939;
 $white:#fff;
 
@@ -184,6 +184,28 @@ body{
                 max-width: 1200px;
                 margin: auto;
                 padding: 20px;
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .tab{
+                        color: $primary;
+                        font-family: 'Myfont';
+                        font-weight: bold;
+
+                        img{
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: $primary;
+                            text-decoration: none;
+                            transition: all 0.4s ease;
+                            &:hover{
+                                color: $secondry;
+                            }
+                        }
+                    }
+                }
                 h1 {
                     text-align: center;
                     margin-bottom: 20px;
@@ -199,7 +221,7 @@ body{
                         background: $primary;
                         color: $white;
                         border-radius: 5px;
-                        transition: background 0.3s;
+                        transition: background 0.8s;
                         &:hover {
                             background: $secondry;
                         }
@@ -285,7 +307,7 @@ body{
                                 cursor: pointer;
                                 transition: background-color 0.3s;
                                 &:hover {
-                                    background-color: #219653;
+                                    background-color: $secondry;
                                 }
                             }
                             
@@ -305,7 +327,7 @@ body{
                         cursor: pointer;
                         transition: background-color 0.3s;
                         &:hover {
-                            background-color: #219653;
+                            background-color: $secondry;
                         }
                     }
                 }

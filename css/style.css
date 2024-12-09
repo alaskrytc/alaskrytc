@@ -164,6 +164,27 @@ body {
   margin: auto;
   padding: 20px;
 }
+.contener .sliders .serveses .container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contener .sliders .serveses .container .header .tab {
+  color: #005559;
+  font-family: "Myfont";
+  font-weight: bold;
+}
+.contener .sliders .serveses .container .header .tab img {
+  border-radius: 50%;
+}
+.contener .sliders .serveses .container .header .tab a {
+  color: #005559;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.contener .sliders .serveses .container .header .tab a:hover {
+  color: #00a0a0;
+}
 .contener .sliders .serveses .container h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -180,10 +201,10 @@ body {
   background: #005559;
   color: #fff;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.8s;
 }
 .contener .sliders .serveses .container .tabs .tab:hover {
-  background: #47FF63;
+  background: #00a0a0;
 }
 .contener .sliders .serveses .container .tabs .tab a {
   color: #fff;
@@ -252,7 +273,7 @@ body {
   transition: color 0.3s;
 }
 .contener .sliders .serveses .container .product-grid .product-card .product-info .social-share i:hover {
-  color: #47FF63;
+  color: #00a0a0;
 }
 .contener .sliders .serveses .container .product-grid .product-card .product-info .btn {
   background-color: #005559;
@@ -267,7 +288,7 @@ body {
   transition: background-color 0.3s;
 }
 .contener .sliders .serveses .container .product-grid .product-card .product-info .btn:hover {
-  background-color: #219653;
+  background-color: #00a0a0;
 }
 .contener .sliders .serveses .container .product-grid .btn {
   background-color: #005559;
@@ -284,7 +305,7 @@ body {
   transition: background-color 0.3s;
 }
 .contener .sliders .serveses .container .product-grid .btn:hover {
-  background-color: #219653;
+  background-color: #00a0a0;
 }
 
 @media (max-width: 768px) {
